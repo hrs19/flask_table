@@ -1,0 +1,21 @@
+{%extends 'index.html'%}
+{%block table_dict%}
+<table>
+       <tr>
+        {%for key,value in data_dict.items()%}
+            <th> {{ key }} </th>
+        {% endfor %}
+        </tr>
+        <tr>
+            
+            {%for i in range(l) %}
+            <tr>
+            {%for key,value in data_dict.items()%}
+            <td> {{ value[i] }} </td>
+            {%endfor%}
+        </tr>
+            {%endfor%}
+        </tr>
+        
+</table>
+{% endblock %}
